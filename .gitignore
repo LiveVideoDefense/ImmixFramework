@@ -1,0 +1,5 @@
+node_modules
+chrome
+immixframework.code-workspace
+*.bat
+test/logs

@@ -1,0 +1,19 @@
+{
+  "name": "immixframework",
+  "version": "0.2.5B",
+  "description": "a framework that wraps over immix for NodeJS",
+  "main": "immixFramework.js",
+  "scripts": {
+    "test": "node ./test/test.js"
+  },
+  "author": "Aiden Desjarlais",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "puppeteer": "19.4.1"
+  },
+  "overrides": {
+    "puppeteer": "19.4.1"
+  }
+}

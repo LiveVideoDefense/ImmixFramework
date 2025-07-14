@@ -1,0 +1,20 @@
+{
+    "immixStationConfigOne": {
+        "username": "",
+        "password": "",
+        "stationId": 1
+    },
+    "immixStationConfigTwo": {
+        "username": "",
+        "password": "",
+        "stationId": 2
+    },
+    "immixConfig": {
+        "username": "",
+        "password": "",
+        "immixUri": "",
+        "stationId": 1,
+        "searchForUser": "",
+        "mediaEventID": 0
+    }
+}
