@@ -73,7 +73,7 @@ try {
 Framework Configuration:
 ```js
 //CONFIG:
-IMMIX.Config.browserExecutablePath ("./chrome/chrome.exe")
+IMMIX.Config.browserExecutablePath // ("./chrome/chrome.exe")
 IMMIX.Config.immixSettings.immixURI // (set-by-config)
 IMMIX.Config.immixSettings.useHttps // (true) - UNTESTED IF FALSE
 IMMIX.Config.immixSettings.username // (set-by-config)
