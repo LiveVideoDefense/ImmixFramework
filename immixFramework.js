@@ -79,9 +79,6 @@ function immixFramework() {
             static auditAuth = undefined;
             static puppeteerSessionCookie = undefined;
             static connection = undefined;
-
-            //if trye on reload will renew audit auth
-            static renewAuditAuth = false;
             /**
              * Set this to true if you want to be authorized for audit endpoints.
              * This significantly increases the framework start time, but gives access to audit endpoints.
@@ -121,6 +118,8 @@ function immixFramework() {
                     Session.isAuthorized = false;
                     Session.sessionCookie = undefined;
                     Session.puppeteerSessionCookie = undefined;
+                    Session.auditAuth = undefined;
+                    Session.getAuditAuth = false;
                     globalThis.immixFrameworkInstance.Debug.log("[FRAMEWORK] Immix framework closed");
                     if (callback)
                         callback();
@@ -192,10 +191,9 @@ function immixFramework() {
              * Reloads the current Immix session, gets new authorization
              */
             static reload(renewAuditAuth = false) {
-                Session.renewAuditAuth = renewAuditAuth;
-
                 return new Promise((resolve, reject) => {
                     Session.close(() => {
+                        Session.getAuditAuth = renewAuditAuth;
                         Session.open(Session.connection).then(() => resolve()).catch(error => reject(error));
                     });
                     globalThis.immixFrameworkInstance.Debug.log('[FRAMEWORK] Reloading Immix');

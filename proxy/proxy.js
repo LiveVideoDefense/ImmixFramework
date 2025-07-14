@@ -76,7 +76,7 @@ async function start(framework) {
                 immixFramework.Session.puppeteerSessionCookie = formatSessionCookie(status.cookie[0]);
 
                 //immix requires users to visit the alarms page before giving them access to the API where the event queues are stored.
-                if (immixFramework.Session.getAuditAuth && (immixFramework.Session.auditAuth === undefined && !immixFramework.Session.renewAuditAuth)) {
+                if (immixFramework.Session.getAuditAuth) {
                     //Here we visit the alarms page, and run a very quick site check on a test site - This allows us to get our audit auth for media.
                     (async () => {
 
