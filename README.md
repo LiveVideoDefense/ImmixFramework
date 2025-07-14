@@ -13,6 +13,9 @@ Available documentation on this project can be found in test.js in ```/test```
 <br>
 <br>
 Will not be released on NPM until we feel like its ready, until then link your projects with ```npm link```
+<br>
+<br>
+**PLEASE PUT A CHROME INSTALLATION INTO ```./chrome``` OR SET PATH WITH CONFIG**
 ## Getting Started
 Example:
 ```js
@@ -70,6 +73,7 @@ try {
 Framework Configuration:
 ```js
 //CONFIG:
+IMMIX.Config.browserExecutablePath ("./chrome/chrome.exe")
 IMMIX.Config.immixSettings.immixURI // (set-by-config)
 IMMIX.Config.immixSettings.useHttps // (true) - UNTESTED IF FALSE
 IMMIX.Config.immixSettings.username // (set-by-config)
