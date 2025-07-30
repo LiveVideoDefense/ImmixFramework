@@ -6,10 +6,12 @@
     window.addEventListener('DOMContentLoaded', () => {
         if (params.username != undefined || params.password != undefined || params.port != undefined || params.pEndpoint != undefined) {
             const login = async () => {
+                var password = atob(params.password);
+                var username = atob(params.username);
                 const response = await fetch('http://localhost:' + params.port + params.pEndpoint + 'basicLogon', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ username: params.username, password: params.password, proxyRequestID: params.requestID })
+                    body: JSON.stringify({ username: username, password: password, proxyRequestID: params.requestID })
                 });
             };
             login();

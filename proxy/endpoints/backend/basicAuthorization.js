@@ -7,9 +7,12 @@ function setDefaults(proxy, framework) {
   immixFramework = framework;
 }
 
-function authorizeBasic(username, password) {
+function authorizeBasic(u, p) {
   return new Promise((resolve, reject) => {
     var requestID = randomUUID();
+    var username = Buffer.from(u).toString('base64');
+    var password = Buffer.from(p).toString('base64');
+
     proxyServer.puppetPage("http://localhost:" + immixFramework.Config.proxySettings.port + immixFramework.Config.proxySettings.proxyAPI + "basicLogon?pEndpoint=" + immixFramework.Config.proxySettings.proxyEndpoint + "&username=" + username + "&password=" + password + "&port=" + immixFramework.Config.proxySettings.port + "&requestID=" + requestID, undefined).then(() => {
       proxyServer.createProxyRequest(requestID).then(req => {
         resolve({ success: req.success, error: req.error, cookie: req.cookie });
