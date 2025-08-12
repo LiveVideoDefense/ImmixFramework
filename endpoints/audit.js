@@ -29,7 +29,8 @@ function getMediaForEventID(eventId, callback) {
                 try {
                     JSON.parse(data);
                 } catch {
-                    console.error(IMMIX.Errors.auditError + ` : getMediaFromEventID(${eventId})`);
+                    console.error(IMMIX.Errors.auditError + ` : getMediaFromEventID(${eventId}) @ eventrecordsget tryparse 1 `, data);
+                    callback({ success: false, error: undefined, media: undefined });
                     return;
                 }
 
@@ -42,7 +43,8 @@ function getMediaForEventID(eventId, callback) {
                                 try {
                                     JSON.parse(data)
                                 } catch {
-                                    console.error(IMMIX.Errors.auditError + ` : getMediaFromEventID(${eventId})`);
+                                    console.error(IMMIX.Errors.auditError + ` : getMediaFromEventID(${eventId}) @ getmedialist tryparse 2 `, data, alarm.eventRecordId, immixFramework.Session.auditAuth);
+                                    callback({ success: false, error: undefined, media: undefined });
                                     return;
                                 }
                                 var mediaObj = JSON.parse(data);
