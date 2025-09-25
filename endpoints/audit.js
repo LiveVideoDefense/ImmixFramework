@@ -82,8 +82,6 @@ function getMediaForEventID(eventId, callback) {
     })
 }
 
-https://immix.livevideodefense.com/audit/getdata?eventrecord=23198886&fileid=MjMxOTg4ODYuLjIwMjUwNjI2LjIyMTkwOTcyLlAubXA0LmR5bmFtaWM=&auth=
-
 
 
 module.exports = {
