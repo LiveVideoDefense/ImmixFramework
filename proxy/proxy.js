@@ -116,7 +116,9 @@ async function start(framework) {
                             // Get auth on page load (wait for btn dom load)
                             await page.waitForSelector('#btnCloseEvent', { timeout: 20000 });
 
-                            const auditAuth = await page.evaluate(() => window.auth);
+							await page.waitForFunction(() => window.auth !== undefined);
+							const auditAuth = await page.evaluate(() => window.auth);
+
                             immixFramework.Debug.log("[FRAMEWORK] Immix returned audit authorization, applying to this session...\n"+ auditAuth +"\n");
                             immixFramework.Session.auditAuth = auditAuth;
 
