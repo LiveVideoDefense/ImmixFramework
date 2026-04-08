@@ -114,7 +114,7 @@ async function start(framework) {
                             );
 
                             // Get auth on page load (wait for btn dom load)
-                            await page.waitForSelector('#btnCloseEvent', { timeout: 20000 });
+                            await page.waitForSelector('#btnCloseEvent', { timeout: 200000 });
 
 							await page.waitForFunction(() => window.auth !== undefined);
 							const auditAuth = await page.evaluate(() => window.auth);
