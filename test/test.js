@@ -183,7 +183,6 @@ async function testAllAsync(showResults) {
 
 }
 
-//only works on testing immix - aiden (async)
 async function testStationSwitch(doInvalid = true) {
     //example of switch stations
     try {
