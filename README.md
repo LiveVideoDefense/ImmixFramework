@@ -1,20 +1,20 @@
-# ImmixFramework
-A framework that gives access to alarm software Immix from NodeJS!
+# Immix Framework
+A wrapper around the Immix API.
 
 ### THIS PROJECT WAS DEVELOPED FOR LIVE VIDEO DEFENSE
-#### This project is in Alpha, there is no guarantee of a full version.
+<i>This project is in Alpha, there is no guarantee of a full version.</i>
 
 
-# Documentation
-Available documentation on this project can be found in test.js in ```/test```
-<br> Full documentation *will* be written soon.
-<br> to test, set config in ```/test``` then in the main directory run ```npm test```
+
+### Documentation on both the Immix Framework and parts of the Immix API (via RE) is available in PDF format (download suggested, originally made in Figma) <a href="https://github.com/LiveVideoDefense/ImmixFramework/blob/main/Docs.pdf">```/Docs.pdf```</a>.
+<br>Extra documentation on this project can be found in test.js in <a href="https://github.com/LiveVideoDefense/ImmixFramework/tree/main/test/test.js">```/test/test.js```</a>
+<br>To perform a test, setup the config in <a href="https://github.com/LiveVideoDefense/ImmixFramework/tree/main/test">```/test (conf docs)```</a> then in the main directory run ```npm test```
 <br>
 <br>
-Will not be released on NPM until we feel like its ready, until then link your projects with ```npm link```
+Will not be released on NPM, link your projects with ```npm link```
 <br>
 <br>
-**PLEASE PUT A CHROME INSTALLATION INTO ```./chrome``` OR SET PATH WITH CONFIG**
+### **PLEASE PUT A CHROME INSTALLATION INTO ```./chrome``` OR SET PATH WITH CONFIG**
 ## Getting Started
 Example:
 ```js
