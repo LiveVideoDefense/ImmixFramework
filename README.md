@@ -1,9 +1,8 @@
 # ImmixFramework
 A framework that gives access to alarm software Immix from NodeJS!
 
-### THIS PROJECT IS DEVELOPED TO FIT LIVE VIDEO DEFENSE'S NEEDS FIRST AND FOREMOST.
-#### This project is in Beta, and is being lead by [Aiden Desjarlais](https://github.com/aidendesjarlais)
-There is no guarantee of a full version.
+### THIS PROJECT WAS DEVELOPED FOR LIVE VIDEO DEFENSE
+#### This project is in Alpha, there is no guarantee of a full version.
 
 
 # Documentation
